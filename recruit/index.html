@@ -206,9 +206,11 @@ $(".btn_go button").click(function(){
 	return false;
 });
 $(".pop_clsoe").click(function(){
-	$("body").removeClass("pop");
-	$(".pop_wrap").fadeOut(200);
-	return false;
+    $("body").removeClass("pop");
+    $(".pop_wrap").fadeOut(200, function() {
+        $(".pop_wrap").removeAttr("style");
+    });
+    return false;
 });
 </script>
 </body>
